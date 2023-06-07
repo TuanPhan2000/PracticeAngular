@@ -10,7 +10,7 @@
       <button class="dropbtn">Manage Recipe</button>
       <div class="dropdown-content">
         <a routerLink="/recipe/edit/{{recipe.id}}">Edit Recipe</a>
-        <a href="#">Delete Recipe</a>
+        <a (click)="deleteRecipeById(recipe.id)">Delete Recipe</a>
       </div>
     </div>
   </div>

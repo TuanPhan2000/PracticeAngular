@@ -39,7 +39,6 @@ export class RecipeFormComponent implements AfterContentChecked{
       this.router.navigate(['/recipe']).then(r => {});
     }
     else {
-      console.log("update")
       this.recipeService.updateRecipe(this.myForm.value as RecipeModel);
       this.location.back();
     }
@@ -50,9 +49,9 @@ export class RecipeFormComponent implements AfterContentChecked{
       const id = Number(this.route.snapshot.paramMap.get('id'));
       if (id !== null) {
         this.recipeService.getById(id).subscribe((data) => {
-          this.oldData = data;
+          this.oldData = {... data};
           this.myForm.patchValue({
-            id: data.id,
+            id: data.id
           });
         })
       }

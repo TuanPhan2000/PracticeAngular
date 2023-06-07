@@ -22,6 +22,11 @@ export class RecipeDetailComponent implements AfterContentChecked{
     this.recipeService.getById(id).subscribe( data => this.recipe = data );
   }
 
+  deleteRecipeById(id: number) {
+    this.recipeService.deleteRecipeById(id);
+    this.router.navigate(['/recipe']);
+  }
+
   ngAfterContentChecked(): void {
     this.getRecipe();
   }

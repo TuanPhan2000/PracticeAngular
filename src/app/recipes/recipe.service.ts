@@ -50,5 +50,12 @@ export class RecipeService {
     }
   }
 
+  deleteRecipeById(id: number) {
+    if (this.recipes && this.recipes.length) {
+      this.recipes = this.recipes.filter(r => r.id !== id);
+    }
+    else this.recipes = [];
+  }
+
 
 }
