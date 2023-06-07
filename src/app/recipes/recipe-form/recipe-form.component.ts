@@ -1,4 +1,4 @@
-import {AfterContentChecked, Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterContentChecked, Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {RecipeModel} from "../recipe.model";
 import {RecipeService} from "../recipe.service";
@@ -11,6 +11,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./recipe-form.component.css']
 })
 export class RecipeFormComponent implements AfterContentChecked{
+
   myForm!: FormGroup;
 
   oldData: RecipeModel = {
@@ -36,7 +37,7 @@ export class RecipeFormComponent implements AfterContentChecked{
   onSubmit() {
     if (this.myForm.get('id')?.value === null) {
       this.recipeService.addRecipe(this.myForm.value as RecipeModel);
-      this.router.navigate(['/recipe']).then(r => {});
+      this.router.navigate(['/recipe']);
     }
     else {
       this.recipeService.updateRecipe(this.myForm.value as RecipeModel);
@@ -44,7 +45,7 @@ export class RecipeFormComponent implements AfterContentChecked{
     }
   }
 
-  getRecipe() {
+  private getRecipe() {
     if(this.router.url.includes('edit')) {
       const id = Number(this.route.snapshot.paramMap.get('id'));
       if (id !== null) {

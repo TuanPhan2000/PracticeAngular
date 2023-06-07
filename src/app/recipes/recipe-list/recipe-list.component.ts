@@ -7,16 +7,13 @@ import {RecipeModel} from "../recipe.model";
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
-export class RecipeListComponent implements OnInit, AfterContentChecked{
+export class RecipeListComponent implements AfterContentChecked{
 
 
   recipes: RecipeModel[] = [];
 
   selectedRecipe: RecipeModel|null = null;
 
-  ngOnInit(): void {
-    this.recipeService.getRecipes().subscribe((data) => this.recipes = data);
-  }
 
   constructor(private recipeService: RecipeService) {
   }

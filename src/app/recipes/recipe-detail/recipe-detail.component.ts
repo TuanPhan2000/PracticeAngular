@@ -17,7 +17,7 @@ export class RecipeDetailComponent implements AfterContentChecked{
               private router: Router) {
   }
 
-  getRecipe() {
+  private getRecipe() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.recipeService.getById(id).subscribe( data => this.recipe = data );
   }
