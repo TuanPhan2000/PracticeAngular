@@ -10,6 +10,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeFormComponent } from './recipes/recipe-form/recipe-form.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {NgOptimizedImage} from "@angular/common";
+import { RecipeNoneComponent } from './recipes/recipe-none/recipe-none.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import {ReactiveFormsModule} from "@angular/forms";
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeFormComponent,
+    RecipeNoneComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        NgOptimizedImage
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

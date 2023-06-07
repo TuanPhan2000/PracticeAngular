@@ -3,6 +3,8 @@
   <button class="btn-add-button" routerLink="/recipe/new">New Recipe</button>
   <app-recipe-list></app-recipe-list>
 </div>
-
+<div class="right-side" *ngIf="displayMessage">
+  <app-recipe-none></app-recipe-none>
+</div>
 <router-outlet></router-outlet>
 </div>

@@ -14,6 +14,7 @@ export class RecipeService {
     { id: 1, name: 'South African Food', imageUrl: 'https://kreatiewekosidees.files.wordpress.com/2013/08/shepards-pie.jpg', description: 'Delicious !!!'}
   ]
 
+
   constructor() { }
 
   getRecipes(): Observable<RecipeModel[]> {
@@ -22,7 +23,7 @@ export class RecipeService {
 
   getById(id: number): Observable<RecipeModel> {
     if (this.recipes) {
-      return of(this.recipes.filter(r => r.id === id)[0]);
+      if (this.recipes.filter(r => r.id === id)[0]) return of(this.recipes.filter(r => r.id === id)[0]);
     }
     return of({name: 'Không tồn tại !'} as RecipeModel);
   }
@@ -37,7 +38,16 @@ export class RecipeService {
       recipe.id = 0;
       this.recipes.push(recipe);
     }
+  }
 
+  updateRecipe(recipe: RecipeModel) {
+    if (this.recipes && this.recipes.length) {
+      this.recipes = this.recipes.filter(r => r.id !== recipe.id);
+      this.recipes.push(recipe);
+    }
+    else {
+      this.recipes = [];
+    }
   }
 
 

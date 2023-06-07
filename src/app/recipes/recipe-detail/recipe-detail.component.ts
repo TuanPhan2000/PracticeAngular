@@ -1,6 +1,6 @@
-import {AfterContentChecked, Component, DoCheck, Input, OnInit} from '@angular/core';
+import {AfterContentChecked, Component, DoCheck, Input, OnDestroy, OnInit} from '@angular/core';
 import {RecipeModel} from "../recipe.model";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {RecipeService} from "../recipe.service";
 
 @Component({
@@ -13,7 +13,8 @@ export class RecipeDetailComponent implements AfterContentChecked{
   recipe!: RecipeModel;
 
   constructor(private route: ActivatedRoute,
-              private recipeService: RecipeService) {
+              private recipeService: RecipeService,
+              private router: Router) {
   }
 
   getRecipe() {
@@ -24,6 +25,5 @@ export class RecipeDetailComponent implements AfterContentChecked{
   ngAfterContentChecked(): void {
     this.getRecipe();
   }
-
 
 }
