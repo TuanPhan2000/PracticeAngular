@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  margin-top: 20px;
+  height: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px; /* Đường viền bo tròn */
+  border: 1px solid #ccc; /* Màu và độ dày của đường viền */
+  padding: 5px; /* Khoảng cách giữa đường viền và nội dung trong phần tử */
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #cccccc;
+}
+.message {
+  margin-top: 10px;
+  font-size: 20px;
+  color: red;
+}
+
+.selected {
+  background-color: #cccccc;
+}
+
+

@@ -1,0 +1,22 @@
+.content {
+  flex: 1;
+}
+
+.image {
+  width: 100px; /* Điều chỉnh kích thước ảnh */
+  height: 100px;
+  margin-left: 20px; /* Khoảng cách bên trái */
+  margin-right: 10px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Đảm bảo ảnh hiển thị cân đối */
+}
+
+.container-item {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+

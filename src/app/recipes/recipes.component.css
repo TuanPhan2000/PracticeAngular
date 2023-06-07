@@ -1,0 +1,18 @@
+
+.container-component {
+  display: flex;
+  height: auto;
+}
+
+.left-side, .right-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-side {
+  max-width: 50%;
+}
+
+.right-side {
+  max-width: 50%;
+}

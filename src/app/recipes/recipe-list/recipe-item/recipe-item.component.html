@@ -1,0 +1,9 @@
+<div class="container-item" *ngIf="recipe" routerLink="/recipe/detail/{{recipe.id}}">
+<div class="content">
+  <h3>{{recipe.name}}</h3>
+  <p>{{recipe.description}}</p>
+</div>
+<div class="image">
+  <img src="{{recipe.imageUrl}}">
+</div>
+</div>

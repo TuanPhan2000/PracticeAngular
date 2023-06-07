@@ -1,0 +1,59 @@
+.btn-add-button {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+}
+
+textarea {
+  height: 200px;
+}
+
+input:focus {
+  border-color: #3366FF; /* Màu bao quanh khi input nhận focus */
+  outline: none; /* Loại bỏ viền màu xanh khi input nhận focus (nếu có) */
+}
+
+textarea:focus {
+  border-color: #3366FF; /* Màu bao quanh khi input nhận focus */
+  outline: none; /* Loại bỏ viền màu xanh khi input nhận focus (nếu có) */
+}
+
+img {
+  width: 150px;
+  height: 100px;
+}
+
+.invalid input {
+  border-color: red;
+  outline: none;
+}
+
+.invalid textarea {
+  border-color: red;
+  outline: none;
+}
+
+.disable-add {
+  background-color: darkseagreen;
+}
+
+.disable-add:hover {
+  cursor: not-allowed;
+}

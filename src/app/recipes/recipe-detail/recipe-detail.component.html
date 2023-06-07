@@ -1,0 +1,17 @@
+<div class="right-side">
+  <div *ngIf="recipe">
+    <div class="content-child">
+      <img class="image" src="{{recipe.imageUrl}}">
+      <h1>{{recipe.name}}</h1>
+      <p>{{recipe.description}}</p>
+    </div>
+
+    <div class="combobox">
+      <select>
+        <option disabled selected>Select an option</option>
+        <option>Edit Recipe</option>
+        <option>Delete Recipe</option>
+      </select>
+    </div>
+  </div>
+</div>
