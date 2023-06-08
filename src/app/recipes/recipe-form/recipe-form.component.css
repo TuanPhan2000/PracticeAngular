@@ -26,13 +26,13 @@ textarea {
 }
 
 input:focus {
-  border-color: #3366FF; /* Màu bao quanh khi input nhận focus */
-  outline: none; /* Loại bỏ viền màu xanh khi input nhận focus (nếu có) */
+  border-color: #3366FF;
+  outline: none;
 }
 
 textarea:focus {
-  border-color: #3366FF; /* Màu bao quanh khi input nhận focus */
-  outline: none; /* Loại bỏ viền màu xanh khi input nhận focus (nếu có) */
+  border-color: #3366FF;
+  outline: none;
 }
 
 img {
