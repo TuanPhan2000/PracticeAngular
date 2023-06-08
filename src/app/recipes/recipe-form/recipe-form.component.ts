@@ -14,11 +14,7 @@ export class RecipeFormComponent implements AfterContentChecked{
 
   myForm!: FormGroup;
 
-  oldData: RecipeModel = {
-    name: 'Recipe Name',
-    imageUrl: '',
-    description: 'Description'
-  } as RecipeModel;
+  oldData: RecipeModel = new RecipeModel();
 
   constructor(private recipeService: RecipeService,
               private router: Router,

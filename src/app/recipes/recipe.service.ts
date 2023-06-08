@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {RecipeModel} from "./recipe.model";
 import {Observable, of} from "rxjs";
+import {RecipeModel} from "./recipe.model";
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +30,7 @@ export class RecipeService {
 
   addRecipe(recipe: RecipeModel) {
     if (this.recipes && this.recipes.length) {
+      // @ts-ignore
       recipe.id = this.recipes[this.recipes.length - 1].id + 1;
       this.recipes.push(recipe);
     }
@@ -52,7 +53,7 @@ export class RecipeService {
     }
   }
 
-  deleteRecipeById(id: number) {
+  deleteRecipeById(id: number | undefined) {
     if (this.recipes && this.recipes.length) {
       this.recipes = this.recipes.filter(r => r.id !== id);
     }
@@ -60,4 +61,8 @@ export class RecipeService {
   }
 
 
+
+
 }
+
+
