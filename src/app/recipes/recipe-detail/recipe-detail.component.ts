@@ -1,4 +1,4 @@
-import {AfterContentChecked, Component, DoCheck, Input, OnDestroy, OnInit} from '@angular/core';
+import {AfterContentChecked, Component} from '@angular/core';
 import {RecipeModel} from "../recipe.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {RecipeService} from "../recipe.service";

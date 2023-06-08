@@ -1,4 +1,4 @@
-import {AfterContentChecked, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AfterContentChecked, Component} from '@angular/core';
 import {RecipeService} from "../recipe.service";
 import {RecipeModel} from "../recipe.model";
 

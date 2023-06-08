@@ -42,8 +42,10 @@ export class RecipeService {
 
   updateRecipe(recipe: RecipeModel) {
     if (this.recipes && this.recipes.length) {
-      this.recipes = this.recipes.filter(r => r.id !== recipe.id);
-      this.recipes.push(recipe);
+      let recipeOld: RecipeModel = this.recipes.filter(r => r.id === recipe.id)[0];
+      recipeOld.name = recipe.name;
+      recipeOld.description = recipe.description;
+      recipeOld.imageUrl = recipe.imageUrl;
     }
     else {
       this.recipes = [];
